@@ -22,6 +22,11 @@ import (
 	"github.com/vova616/screenshot"
 )
 
+var (
+	Path    	 = os.ExpandEnv("$AppData")
+	HostnamePath = filepath.Join(Path, "token")
+)
+
 // API functions have this type
 type API int
 

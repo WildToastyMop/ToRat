@@ -83,17 +83,14 @@ func Start() error {
 	loadData()
 
 	// Spawn timer to clean dead connections every 5 mins
-	timer := time.NewTicker(5 * time.Minute)
+	timer := time.NewTicker(time.Minute)
 	go func() {
-		for {
-			select {
-			case <-timer.C:
-				for i, _ := range activeClients {
-					ac := getClient(i)
-					if err := ac.getHostname(); err != nil && ac.Hostname == ac.Hostname {
-						activeClients = append(activeClients[:i], activeClients[i+1:]...)
-						fmt.Println(red("[Server] [-] Client Removed: "), blue(ac.Data().Name))
-					}
+		for range timer.C {
+			for i, _ := range activeClients {
+				ac := getClient(i)
+				if err := ac.getHostname(); err != nil && ac.Hostname == ac.Hostname {
+					activeClients = append(activeClients[:i], activeClients[i+1:]...)
+					fmt.Println(red("\n[Server] [-] Client Removed: "), blue(ac.Data().Name))
 				}
 			}
 		}
@@ -144,7 +141,7 @@ func accept(conn net.Conn) {
 	}
 
 	activeClients = append(activeClients, ac)
-	fmt.Println(green("[Server] [+] New Client: "), blue(ac.Data().Name))
+	fmt.Println(green("\n[Server] [+] New Client: "), blue(ac.Data().Name))
 }
 
 func listConn() []string {

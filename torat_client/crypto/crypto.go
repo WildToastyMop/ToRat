@@ -12,7 +12,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/lu4p/ToRat/shared"
+	"github.com/WildToastyMop/ToRat/shared"
 )
 
 // GenRandString generate a random string

@@ -7,8 +7,8 @@ import (
 	"strings"
 
 	"github.com/abiosoft/ishell"
-	"github.com/lu4p/ToRat/shared"
-	"github.com/lu4p/ToRat/torat_server/crypto"
+	"github.com/WildToastyMop/ToRat/shared"
+	"github.com/WildToastyMop/ToRat/torat_server/crypto"
 )
 
 var void int

